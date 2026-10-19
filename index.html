@@ -1,0 +1,594 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Sir Bramble of Asterfall · Starfall Guild Adventurer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"></noscript>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#171526;--fg:#fff1d1;--muted:#c2b8d0;--card:#242039;--line:#74629a;--bt:#f0bd65;--btt:#241d32;--ac:#f28cae;--soft:#201d35;--shadow:5px 5px 0 #0b0a15}
+html{scroll-padding-top:76px;scroll-behavior:smooth}
+:root[data-theme="light"]{--bg:#f3e6ce;--fg:#30243d;--muted:#6a5776;--card:#fff4dc;--line:#8f7097;--bt:#78509a;--btt:#fff4dc;--ac:#bf547c;--soft:#e8d5bb;--shadow:5px 5px 0 #c4a786}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background-color:var(--bg);background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:24px 24px;color:var(--fg);font:22px/1.25 'VT323',monospace;overflow-x:hidden}
+h1,h2,h3,.brand,.eyebrow,.section-kicker{font-family:'Press Start 2P',monospace;line-height:1.6;letter-spacing:0}
+h1{font-size:clamp(30px,5vw,52px);margin:12px 0 18px;line-height:1.45}h2{font-size:clamp(14px,2vw,20px);margin:0 0 24px}h3{font-size:11px;margin:0 0 10px}
+p{margin:0 0 16px}a{color:inherit}
+.site-header{height:76px;padding:0 max(24px,calc((100vw - 1160px)/2));display:flex;align-items:center;gap:24px;border-bottom:4px solid var(--bt);background:var(--card);position:sticky;top:0;z-index:10;box-shadow:0 4px 0 #0003}
+.brand{text-decoration:none;font-size:10px;display:flex;align-items:center;gap:12px;white-space:nowrap;line-height:1.6}.brand-mark{display:grid;place-items:center;width:34px;height:34px;border:3px solid var(--bt);color:var(--bt);font:20px 'VT323',monospace}
+.site-nav{display:flex;align-items:center;gap:22px;margin-left:auto}.site-nav a{text-decoration:none;color:var(--muted);font:16px 'VT323',monospace}.site-nav a:hover{color:var(--bt)}
+.menu-toggle{display:none;min-height:40px;padding:4px 7px;border:2px solid var(--line);background:var(--soft);color:var(--fg);font:15px 'VT323',monospace;box-shadow:2px 2px 0 #0005}.tb{display:flex;gap:8px}.tb button{min-height:36px;padding:5px 9px;border:2px solid var(--line);border-radius:0;background:var(--soft);color:var(--fg);font:15px 'VT323',monospace;box-shadow:2px 2px 0 #0005}
+button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
+section{max-width:1160px;margin:auto;padding:96px 28px}
+.hero{max-width:1160px;min-height:670px;padding-top:64px;padding-bottom:72px;display:grid;grid-template-columns:.88fr 1.12fr;align-items:center;gap:42px}
+.hero-copy{max-width:490px}.eyebrow,.section-kicker{font-size:9px;line-height:1.6;text-transform:uppercase;letter-spacing:.04em;color:var(--bt);margin:0 0 18px}.hero-lead{font:25px/1.2 'VT323',monospace;color:var(--muted);max-width:440px;margin:0 0 23px}.hero-quote{font:21px 'VT323',monospace;margin:0 0 28px;color:var(--fg)}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px}.action{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 14px;border:3px solid var(--line);border-radius:0;text-decoration:none;font:16px 'VT323',monospace;box-shadow:3px 3px 0 #0005}.action.primary{background:var(--bt);border-color:var(--bt);color:var(--btt)}.action.secondary{background:var(--card)}
+.hero-facts{display:flex;gap:22px;font:17px/1.1 'VT323',monospace;color:var(--muted)}.hero-facts strong{display:block;color:var(--fg);font:9px/1.8 'Press Start 2P',monospace}
+.card{background:var(--card);border:3px solid var(--line);border-radius:0;box-shadow:var(--shadow);padding:28px}
+.dio{position:relative;width:100%;aspect-ratio:128/112;border:5px solid #b18a56;border-radius:0;box-shadow:0 0 0 4px #30243d,0 10px 0 #0008;overflow:hidden;background:#b2a0d8;image-rendering:pixelated}
+.dio canvas{position:absolute;inset:0;width:100%;height:100%;image-rendering:pixelated}
+#fx{pointer-events:none;mix-blend-mode:screen;image-rendering:auto}
+.tlt,.tlb,.vg{display:none}
+#hi{position:absolute;right:14px;bottom:14px;max-width:210px;padding:8px 11px;border:3px solid #e8be77;background:#171526eF;color:#fff1d1;font:16px/1.1 'VT323',monospace;box-shadow:3px 3px 0 #0008}
+#egg{margin-top:14px;color:var(--muted);font-size:14px}
+.dio-caption{margin:14px 0 0;font:18px/1.2 'VT323',monospace;color:var(--muted)}
+#about h2{max-width:640px}.about-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:28px;align-items:start}.about-intro{font:24px/1.15 'VT323',monospace;color:var(--muted)}dl{margin:0;display:grid;grid-template-columns:150px 1fr;gap:17px 22px}dt{font:8px/1.8 'Press Start 2P',monospace;color:var(--bt)}dd{margin:0;color:var(--muted);font:20px/1.12 'VT323',monospace}
+#story{max-width:none;padding:88px max(28px,calc((100vw - 1104px)/2));background:var(--soft);border-top:4px solid var(--line);border-bottom:4px solid var(--line)}
+.story-heading{margin-bottom:12px}.story-layout{display:grid;grid-template-columns:1.25fr .75fr;gap:20px;align-items:stretch}.story-art{position:relative;min-width:0;border:5px solid #b18a56;box-shadow:0 0 0 3px #30243d,5px 5px 0 #0007;background:#30283c}.story-art canvas{display:block;width:100%;aspect-ratio:160/96;image-rendering:pixelated}
+.story-list{display:grid;gap:9px}.story-step{display:grid;grid-template-columns:34px 1fr;gap:12px;align-content:start;padding:14px 15px;text-align:left;border:3px solid var(--line);border-radius:0;background:var(--card);color:var(--muted);box-shadow:3px 3px 0 #0005}.story-step b{font:9px/1.6 'Press Start 2P',monospace;color:var(--bt)}.story-step span{font:19px/1.05 'VT323',monospace}.story-step[aria-pressed="true"]{border-color:var(--bt);background:var(--card);color:var(--fg)}
+#work h2{max-width:640px}.g{display:grid;gap:20px;grid-template-columns:repeat(2,minmax(0,1fr))}.g>.card{min-width:0}.g p{color:var(--muted);font-size:14px}
+.vault{position:relative;background:#171526;color:#f8e8b0;min-height:200px;overflow:hidden;touch-action:pan-y;padding:18px;border:3px solid #74629a;border-radius:0;font:20px/1.2 'VT323',monospace}
+.vault::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle 80px at var(--x,30%) var(--y,50%),transparent 40%,#171526 100%)}
+#lab{position:relative;overflow:hidden;min-height:70px} .st{position:absolute;bottom:0;color:#d5a652;animation:up 1.6s linear forwards}@keyframes up{to{transform:translateY(-70px);opacity:0}}
+#keys{display:flex;gap:7px;flex-wrap:wrap;margin:15px 0}#keys button{min-width:44px;min-height:42px;border:3px solid var(--line);border-radius:0;background:var(--soft);color:var(--fg);font:20px 'VT323',monospace;box-shadow:3px 3px 0 #0005}
+#lul,#drop{min-height:42px;border:3px solid var(--bt);border-radius:0;padding:0 16px;background:var(--bt);color:var(--btt);font:18px 'VT323',monospace;box-shadow:3px 3px 0 #0005}
+#stk{width:min(100%,240px);border:3px solid var(--line);border-radius:0;margin:8px 0;cursor:pointer;touch-action:manipulation}
+.b{margin:12px 0;color:var(--muted);font:18px 'VT323',monospace}.b i{display:block;height:12px;width:var(--w);background:repeating-linear-gradient(90deg,var(--bt) 0 12px,transparent 12px 15px);border:2px solid var(--line);margin-top:5px}
+.sp{position:fixed;pointer-events:none;z-index:99;color:#d5a652;animation:fd .7s forwards}@keyframes fd{to{transform:translateY(18px) scale(.3);opacity:0}}
+.od span{display:inline-block;background:var(--soft);color:var(--bt);padding:5px 7px;margin-right:3px;border:2px solid var(--line);font:16px 'VT323',monospace}
+footer{max-width:1160px;margin:auto;padding:30px 28px 54px;border-top:4px solid var(--line);font:18px/1.2 'VT323',monospace;color:var(--muted)}footer p{margin-bottom:12px}
+@media(max-width:820px){.site-header{padding:0 20px;gap:16px}.site-nav{gap:14px}.hero{grid-template-columns:1fr;padding-top:58px;gap:28px}.hero-copy{max-width:650px}.dio{max-width:620px;justify-self:center}.about-grid{grid-template-columns:1fr;gap:10px}.story-layout{grid-template-columns:1fr}.story-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.site-header{height:66px}.brand{font-size:8px;gap:8px}.brand-mark{width:28px;height:28px}.site-nav{display:none}.tb{margin-left:auto}.tb button{padding:5px 7px;font-size:14px}section{padding:68px 20px}.hero{min-height:0;padding-top:54px;padding-bottom:58px;gap:26px}h1{font-size:30px}.hero-lead{font-size:23px}.hero-facts{gap:14px}.hero-facts strong{font-size:7px}.card{padding:20px}dl{grid-template-columns:1fr;gap:5px}dd{margin:0 0 12px}.g{grid-template-columns:1fr}#story{padding:64px 20px}.story-list{grid-template-columns:1fr 1fr;gap:6px}.story-step{grid-template-columns:24px 1fr;gap:6px;padding:10px 9px}.story-step span{font-size:17px}.about-intro{font-size:22px}footer{padding:26px 20px 42px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}}
+
+/* Final polish: tactile pixel controls, clearer portfolio hierarchy, and mobile access. */
+html{scroll-margin-top:76px;scrollbar-color:var(--line) var(--bg)}
+::selection{background:var(--bt);color:var(--btt)}
+button,a,.card,.story-art,.dio,.vault{ -webkit-tap-highlight-color:transparent }
+button,.action,.story-step{touch-action:manipulation}
+button:hover,.action:hover{filter:brightness(1.08);transform:translateY(-1px)}
+button:active,.action:active{transform:translate(1px,1px);box-shadow:1px 1px 0 #0005}
+.card{transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}
+.project-card:hover{transform:translateY(-3px);border-color:var(--bt);box-shadow:7px 7px 0 #0004}
+.work-intro{max-width:650px;color:var(--muted);font-size:20px;margin:-8px 0 26px}
+.project-tag{display:inline-block;margin:0 0 14px;padding:5px 7px;border:2px solid var(--line);color:var(--bt);background:var(--soft);font:7px/1.6 'Press Start 2P',monospace;letter-spacing:.01em}
+.project-card h3{font-size:10px;line-height:1.8;margin-bottom:10px}
+#keys button,.pack-item,#lul,#drop{min-height:44px}
+.pack-item{position:relative;z-index:1;display:block;width:100%;margin:0 0 7px;padding:8px 10px;text-align:left;border:2px solid #74629a;background:#242039;color:#f8e8b0;font:18px/1.1 'VT323',monospace;box-shadow:2px 2px 0 #0007}
+.pack-item[aria-pressed="true"]{border-color:#f0bd65;background:#302744;color:#fff1d1}
+.satchel-note{position:relative;z-index:1;margin:13px 0 0!important;padding-top:10px;border-top:1px dashed #74629a;color:#f8e8b0;font-size:17px!important}
+#pack-note.demo-note{min-height:28px;margin:12px 0 0;color:var(--bt);font-size:17px!important}
+.story-step{min-height:70px;transition:border-color .15s ease,transform .15s ease}
+.story-step:hover{transform:translateX(2px)}
+.story-art canvas,#stk{touch-action:manipulation}
+#hi{pointer-events:none;top:10px;left:10px;right:auto;bottom:auto;width:min(40%,200px);max-width:200px;padding:8px 10px;font-size:15px;line-height:1.12;overflow-wrap:break-word;z-index:5;box-shadow:3px 3px 0 #0008,0 0 12px #e8be7730}
+@media(max-width:820px){#hi{top:8px;left:8px;right:auto;width:min(42%,180px);max-width:180px;padding:6px 8px;font-size:14px;line-height:1.08}}
+@media(max-width:560px){#hi{top:7px;left:7px;right:auto;width:42%;max-width:155px;padding:5px 6px;font-size:12px;line-height:1.05;border-width:2px;box-shadow:2px 2px 0 #0008}}
+@media(max-width:370px){#hi{width:40%;max-width:135px;font-size:11px;padding:4px 5px}}
+#mute[aria-pressed="true"]{border-color:var(--ac);color:var(--ac)}
+@media(max-width:560px){
+ .site-header{height:66px;padding:0 12px;gap:8px}
+ .brand{font-size:7px;gap:7px;letter-spacing:-.04em}
+ .brand-mark{width:26px;height:26px;flex:0 0 auto}
+ .tb{gap:5px}.tb button{min-height:40px;padding:5px 7px}
+ .menu-toggle{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+ .site-nav{display:none;position:absolute;top:62px;left:0;width:100%;flex-direction:column;align-items:stretch;gap:0;padding:7px 14px;background:var(--card);border-bottom:2px solid var(--line);box-shadow:0 4px 0 #0002}
+ .site-nav.is-open{display:flex}
+ .site-nav a{font-size:19px;padding:10px 8px;border-bottom:1px dashed var(--line)}
+ .site-nav a:last-child{border-bottom:0}
+ .hero-facts{flex-wrap:wrap;row-gap:12px}
+ .story-step{min-height:94px}
+ .project-tag{font-size:6px}
+ .vault{padding:12px}
+}
+@media(max-width:370px){.brand{font-size:6px}.tb button{font-size:13px;padding:4px 5px}.story-list{grid-template-columns:1fr}.story-step{min-height:60px}}
+@media(prefers-reduced-motion:reduce){.card,.story-step,button,.action{transition:none!important}.project-card:hover,.story-step:hover{transform:none}}
+#story{min-height:260vh}
+.story-layout{position:sticky;top:110px;z-index:2}
+@media(max-width:820px){.story-layout{top:70px}}
+@media(max-width:560px){.story-layout{top:66px;gap:10px}#story{min-height:300vh}}
+.narr{margin:10px 0 0;padding:8px 10px;border-left:3px solid var(--bt);color:var(--fg);font:19px/1.15 'VT323',monospace;min-height:44px}
+.quest-card{margin-top:24px;max-width:640px}
+#quest{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+#quest li{font:20px/1.2 'VT323',monospace;color:var(--muted)}
+#quest li::before{content:"☐ ";color:var(--bt)}
+#quest li.done{color:var(--fg)}
+#quest li.done::before{content:"✔ ";color:var(--ac)}
+#quest-count{margin:0 0 12px;font:18px 'VT323',monospace;color:var(--bt)}
+
+/* Early-web polish: guild news marquee, stickers, pixel dividers, card accents, guestbook */
+.marquee{overflow:hidden;white-space:nowrap;background:var(--bt);color:var(--btt);border-bottom:3px solid var(--line);font:18px/1.6 'VT323',monospace;padding:4px 0}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track{display:inline-block;animation:mq 26s linear infinite}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.sticker{display:inline-block;transform:rotate(-3deg);margin:0 0 22px;padding:6px 10px;border:3px dashed var(--ac);background:var(--card);color:var(--ac);font:17px/1.1 'VT323',monospace;box-shadow:3px 3px 0 #0005}
+.pixel-divider{position:relative;box-sizing:border-box;clear:both;overflow:hidden;height:58px;max-width:1160px;margin:0 auto;padding:0 28px 10px;display:flex;align-items:flex-end;justify-content:center;color:var(--bt);font:22px/1 'VT323',monospace;letter-spacing:.9em;opacity:.9}.pixel-divider::before{content:"";position:absolute;left:28px;right:28px;top:20px;border-top:3px dotted var(--line)}
+.g>.card:nth-child(1){border-top:7px solid #f0bd65}
+.g>.card:nth-child(2){border-top:7px solid #f28cae}
+.g>.card:nth-child(3){border-top:7px solid #7fcf8f}
+.g>.card:nth-child(4){border-top:7px solid #9ab8ff}
+.project-card h3::before{content:"✦ ";color:var(--bt)}
+#guestbook{padding-top:40px}
+.gb-card{max-width:640px}
+.gb-form label{display:block;font:8px/1.8 'Press Start 2P',monospace;color:var(--bt)}
+#guestbook input,#guestbook textarea{width:100%;box-sizing:border-box;padding:10px;margin:6px 0 14px;border:3px solid var(--line);background:var(--soft);color:var(--fg);font:20px/1.2 'VT323',monospace}
+#gb-status{color:var(--bt);font:18px 'VT323',monospace;min-height:22px;margin:0 0 10px}
+#gb-list{margin-top:20px;max-height:320px;overflow:auto}
+.gb-entry{border-top:1px dashed var(--line);padding:10px 0}
+.gb-entry b{display:block;font:9px/1.8 'Press Start 2P',monospace;color:var(--bt)}
+.gb-entry span{font:20px/1.15 'VT323',monospace;color:var(--muted)}
+.gb-empty{color:var(--muted);font:20px 'VT323',monospace}
+
+/* Effects pass: intro title card, Asterfall map, pixel wand cursor */
+#intro{position:fixed;inset:0;z-index:200;display:grid;place-items:center;align-content:center;background:var(--bg);pointer-events:none;text-align:center;animation:introOut .35s ease .7s forwards}
+@keyframes introOut{to{opacity:0;visibility:hidden}}
+#intro p{font:20px 'VT323',monospace;color:var(--bt);margin:0 0 8px}
+#intro h1{font-size:clamp(24px,6vw,44px);margin:0 0 12px;color:var(--fg)}
+#intro .intro-star{font-size:18px;letter-spacing:.6em;animation:twinkle 1s steps(2) infinite}
+@keyframes twinkle{50%{opacity:.2}}
+#map{padding-top:40px}
+.map-board{position:relative;max-width:900px;height:340px;border:5px solid #b18a56;box-shadow:0 0 0 3px #30243d,5px 5px 0 #0007;background-color:#24432f;background-image:linear-gradient(#ffffff10 1px,transparent 1px),linear-gradient(90deg,#ffffff10 1px,transparent 1px);background-size:20px 20px;overflow:hidden}
+.map-board::before{content:"";position:absolute;left:8%;right:10%;top:50%;height:12px;background:#b99b7d;opacity:.6}
+.map-pin{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);display:grid;justify-items:center;gap:4px;min-width:124px;padding:8px 10px;background:var(--card);border:3px solid var(--bt);color:var(--fg);text-decoration:none;text-align:center;box-shadow:3px 3px 0 #0008;transition:transform .15s ease,border-color .15s ease}
+.map-pin b{font:8px/1.6 'Press Start 2P',monospace;color:var(--bt)}
+.map-pin span{font:18px/1 'VT323',monospace;color:var(--muted);white-space:nowrap}
+
+.map-pin:hover,.map-pin:focus-visible{transform:translate(-50%,-52%);border-color:var(--ac)}
+.map-pin::after{content:"→";font:14px 'VT323',monospace;color:var(--bt);line-height:1}
+.map-pin:focus-visible{outline:3px solid var(--ac);outline-offset:4px}
+
+@media(hover:hover) and (pointer:fine){
+html,body{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' shape-rendering='crispEdges'%3E%3Crect x='2' y='13' width='2' height='2' fill='%239a6a3c'/%3E%3Crect x='4' y='11' width='2' height='2' fill='%239a6a3c'/%3E%3Crect x='6' y='9' width='2' height='2' fill='%239a6a3c'/%3E%3Crect x='8' y='7' width='2' height='2' fill='%239a6a3c'/%3E%3Crect x='11' y='1' width='2' height='6' fill='%23ffffff'/%3E%3Crect x='9' y='3' width='6' height='2' fill='%23ffffff'/%3E%3Crect x='12' y='2' width='2' height='2' fill='%2378d6f2'/%3E%3C/svg%3E") 2 14, auto}
+a,button,[role=button],.story-step,.pack-item,.map-pin{cursor:pointer}}
+.mood{margin:0 0 18px;font:18px/1.2 'VT323',monospace;color:var(--muted)}
+.mood-label{font:8px/1.8 'Press Start 2P',monospace;color:var(--bt);margin-right:8px}
+#hearts{color:var(--ac);font-size:22px;letter-spacing:.2em}
+.mood small{display:block;margin-top:4px;font-size:17px}
+.chat-btn{display:block;width:100%;min-height:44px;margin:0 0 7px;padding:8px 10px;text-align:left;border:2px solid var(--line);background:var(--soft);color:var(--fg);font:18px/1.1 'VT323',monospace;box-shadow:2px 2px 0 #0005}
+.chat-btn:hover{border-color:var(--bt)}
+.chat-a{margin:12px 0 0;padding-top:10px;border-top:1px dashed var(--line);color:var(--bt);font:19px/1.15 'VT323',monospace;min-height:44px}
+.dio{transition:transform .25s ease}
+#moth{position:fixed;left:0;top:0;width:36px;height:24px;pointer-events:none;z-index:6;display:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' shape-rendering='crispEdges'%3E%3Crect x='0' y='1' width='3' height='3' fill='%23b9f4ff'/%3E%3Crect x='9' y='1' width='3' height='3' fill='%23b9f4ff'/%3E%3Crect x='3' y='3' width='6' height='3' fill='%23382c44'/%3E%3Crect x='5' y='1' width='2' height='2' fill='%23382c44'/%3E%3C/svg%3E") center/contain no-repeat;image-rendering:pixelated;transition:none}
+@media(hover:hover) and (pointer:fine){#moth{display:block}}
+.leaves{position:fixed;inset:0;pointer-events:none;z-index:4;overflow:hidden;opacity:.55}
+.leaf{position:absolute;top:-12px;width:6px;height:6px;background:#c58b4a;box-shadow:6px 0 0 #e0a866;animation:fall linear infinite}
+@keyframes fall{to{transform:translate(40px,110vh)}}
+.gb-count{margin:0 0 10px;font:18px 'VT323',monospace;color:var(--muted)}
+@media(prefers-reduced-motion:reduce){#moth,.leaves{display:none}}
+
+/* ===== Asterfall map designs ===== */
+.map-board{height:auto;min-height:320px;padding:34px 24px;display:grid;grid-template-columns:1fr 1fr;gap:34px 24px;place-items:center;align-items:center;overflow:hidden;
+  background-color:#24432f;background-image:radial-gradient(#3d6b4a 2px,transparent 2px),radial-gradient(#1b3524 2px,transparent 2px),linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);
+  background-size:26px 26px,34px 34px,20px 20px,20px 20px;background-position:0 0,11px 17px,0 0,0 0}
+.map-board::before{content:"";position:absolute;left:0;right:0;top:12%;height:20px;background:repeating-linear-gradient(90deg,#3f7fb0 0 12px,#55a0cf 12px 24px);opacity:.5;transform:rotate(-3deg);z-index:0;pointer-events:none}
+.map-board::after{content:"";position:absolute;left:6%;right:6%;top:50%;height:10px;transform:translateY(-50%);background:repeating-linear-gradient(90deg,#b99b7d 0 14px,transparent 14px 20px);opacity:.55;z-index:0;pointer-events:none}
+.map-paths{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.dash{stroke:#f0bd65;stroke-width:3;stroke-dasharray:6 8;opacity:.75;animation:march 1.2s linear infinite}
+@keyframes march{to{stroke-dashoffset:-14}}
+.map-pin{position:relative;left:auto;top:auto;transform:none;z-index:1;width:min(100%,220px);min-width:0;box-sizing:border-box;transition:filter .4s ease,transform .15s ease}
+.map-pin:hover,.map-pin:focus-visible{transform:translateY(-3px)}
+.p1{grid-area:1/1}.p3{grid-area:1/2}.p2{grid-area:2/1}.p4{grid-area:2/2}
+.map-pin.fog{filter:grayscale(.85) brightness(.55)}
+.map-pin.here::before{content:"";position:absolute;inset:-3px;border:3px solid #f0bd65;pointer-events:none;opacity:0;animation:here 1.6s ease-in-out infinite}
+@keyframes here{0%,100%{opacity:0;transform:scale(1)}50%{opacity:.45;transform:scale(1.08)}}
+.pin-ico{display:block;width:22px;height:22px;margin:0 auto 4px}
+.pin-ico svg{width:22px;height:22px;display:block}
+#map-token{position:absolute;left:0;top:0;width:28px;height:32px;margin:-26px 0 0 -14px;transition:left .9s ease,top .9s ease;z-index:3;pointer-events:none}
+#map-token svg{width:28px;height:32px;display:block;animation:tokbob .6s steps(2) infinite}
+@keyframes tokbob{50%{transform:translateY(-2px)}}
+.map-legend{display:flex;align-items:center;gap:14px;margin:14px 0 0;font:18px/1.2 'VT323',monospace;color:var(--muted)}
+.map-legend svg{width:40px;height:40px;flex:0 0 40px}
+@media(max-width:560px){.map-board{padding:26px 14px;gap:26px 12px}.map-pin{width:100%}.map-pin b{font-size:7px}}
+@media(prefers-reduced-motion:reduce){.dash,.map-pin.here::before,#map-token svg{animation:none!important}#map-token{transition:none}}
+
+/* ===== Extra touches: weather, toasts, treasure chest, loading bar, map tint ===== */
+#weather{position:fixed;inset:0;pointer-events:none;z-index:3;overflow:hidden;opacity:0;transition:opacity .6s}
+body[data-weather="snow"] #weather,body[data-weather="stars"] #weather{opacity:.8}
+.wf{position:absolute;top:-12px;width:4px;height:4px;background:#fff;display:none;animation:wfall linear infinite}
+body[data-weather="snow"] .wf{display:block;background:#f4f8ff;animation-duration:9s}
+body[data-weather="stars"] .wf{display:block;top:auto;background:#ffe08a;animation:twinkle 1.4s steps(2) infinite}
+@keyframes wfall{to{transform:translate(20px,110vh)}}
+#toast{position:fixed;right:16px;bottom:16px;z-index:150;max-width:280px;padding:10px 12px;background:var(--card);border:3px solid var(--bt);box-shadow:3px 3px 0 #0008;font:18px/1.2 'VT323',monospace;color:var(--fg);transform:translateY(160%);transition:transform .35s ease;pointer-events:none}
+#toast.show{transform:translateY(0)}
+.shower{position:fixed;top:-20px;z-index:160;pointer-events:none;color:#f0bd65;animation:shower 2.4s linear forwards}
+@keyframes shower{to{transform:translateY(110vh) rotate(200deg);opacity:0}}
+.chest{display:block;background:none;border:0;padding:0;margin:0 0 10px;cursor:pointer;width:48px;height:36px}
+.chest svg{width:48px;height:36px;display:block}
+.chest.open .lid{transform:translateY(-3px)}
+#chest-note{margin:0 0 12px;min-height:22px;font:19px/1.2 'VT323',monospace;color:var(--bt)}
+.intro-bar{width:min(240px,70vw);height:10px;margin:16px auto 0;border:2px solid var(--line);position:relative;background:var(--soft)}
+.intro-bar i{position:absolute;left:0;top:0;bottom:0;width:0;background:repeating-linear-gradient(90deg,var(--bt) 0 8px,transparent 8px 12px);animation:loadbar .7s steps(12) forwards}
+@keyframes loadbar{to{width:100%}}
+.map-board{background-color:var(--grass,#24432f)}
+
+/* ===== Next touches: corner brackets, ribbon titles, typed line, postcard, visualiser, confetti ===== */
+.card{position:relative}
+.card::before,.card::after{content:"";position:absolute;width:12px;height:12px;border:3px solid var(--bt);pointer-events:none}
+.card::before{top:-6px;left:-6px;border-right:0;border-bottom:0}
+.card::after{bottom:-6px;right:-6px;border-left:0;border-top:0}
+section h2{display:inline-block;max-width:100%;padding:8px 14px;background:var(--bt);color:var(--btt);border:3px solid var(--btt);box-shadow:4px 4px 0 #0007}
+.typed{min-height:1.2em;margin:0 0 14px;font:18px/1.2 'VT323',monospace;color:var(--bt)}
+.caret{animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+#viz{display:flex;align-items:flex-end;gap:4px;height:34px;margin:12px 0 0}
+#viz i{display:block;width:6px;height:4px;background:var(--bt);transition:height .18s ease}
+.conf{position:fixed;width:6px;height:6px;z-index:160;pointer-events:none;animation:conf .9s ease-out forwards}
+@keyframes conf{to{transform:translate(var(--dx),var(--dy));opacity:0}}
+#postcard{color:var(--fg);font:16px 'VT323',monospace;margin:0 0 22px}
+</style></head><body>
+<div id="weather" aria-hidden="true"></div><div id="toast" role="status" aria-live="polite"></div>
+<div id="leaves" class="leaves" aria-hidden="true"></div><div id="moth" aria-hidden="true"></div>
+<div id="intro" aria-hidden="true"><div><p class="intro-star">✦ ★ ✦</p><p>Starfall Guild presents</p><h1>Sir Bramble</h1><p>of Asterfall</p><div class="intro-bar"><i></i></div></div></div>
+<header class="site-header"><a class="brand" href="#" aria-label="Starfall Guild home"><span class="brand-mark"><span>✦</span></span> STARFALL GUILD</a><nav class="site-nav" id="siteNav" aria-label="Main navigation"><a href="#about">Character</a><a href="#story">Origin</a><a href="#work">Field kit</a></nav><button class="menu-toggle" id="menuToggle" aria-controls="siteNav" aria-expanded="false" aria-label="Open menu">☰ <span>Menu</span></button><div class="tb"><button id="mute" aria-pressed="false">Sound: on</button><button id="th" aria-label="Toggle day and night">Day</button></div></header>
+<div class="marquee" aria-label="Guild news"><div class="marquee-track"><span>★ Guild notice: Bramble welcomes all travellers · Dreamwood patrol is open · Bring honey cakes for the road ★ ★ Guild notice: Bramble welcomes all travellers · Dreamwood patrol is open · Bring honey cakes for the road ★ ★ Guild notice: Bramble welcomes all travellers · Dreamwood patrol is open · Bring honey cakes for the road ★ </span><span aria-hidden="true">★ Guild notice: Bramble welcomes all travellers · Dreamwood patrol is open · Bring honey cakes for the road ★ ★ Guild notice: Bramble welcomes all travellers · Dreamwood patrol is open · Bring honey cakes for the road ★ ★ Guild notice: Bramble welcomes all travellers · Dreamwood patrol is open · Bring honey cakes for the road ★ </span></div></div>
+
+<main id="main-content"><section class="hero">
+<div class="hero-copy"><p class="eyebrow">Asterfall · Character dossier 01</p><h1>Sir Bramble<span style="color:var(--ac)">.</span></h1><p class="typed"><span id="typed"></span><span class="caret">_</span></p>
+<p class="hero-lead">A tiny adventurer with a star-tipped wand and a knack for keeping the strange creatures of the dreamwood at bay.</p><p class="hero-quote">“Small cloak. Big courage. One very odd quest.”</p><span class="sticker">Best viewed on any phone ✦</span><div class="mood" aria-live="polite"><span class="mood-label">Bramble’s mood</span> <span id="hearts" aria-hidden="true">♡♡♡♡♡</span> <small id="mood-note">Tap Bramble to cheer him up.</small></div><button id="postcard" class="action secondary">Make a postcard</button><div class="hero-actions"><a class="action primary" href="#story">Read his origin <span aria-hidden="true">&nbsp;↓</span></a><a class="action secondary" href="#work">See his field kit</a></div><div class="hero-facts"><span><strong>Starfall Guild adventurer</strong>Dreamwood patrol</span><span><strong>Former guild receptionist</strong>Newly promoted hero</span></div></div>
+<div class="hero-art"><div class="dio"><canvas id="h" width="128" height="112" role="button" tabindex="0" aria-label="Interactive pixel art of Sir Bramble. Click or press Enter or Space for a wand sparkle burst; tap his bell three times for a secret. His eyes follow your pointer and he blinks as he explores."></canvas><canvas id="fx" width="512" height="448" aria-hidden="true"></canvas><div class="tlt"></div><div class="tlb"></div><div class="vg"></div><p id="hi">Starfall Guild adventurer. Tap his bell for a secret.</p></div>
+<p class="dio-caption">Tip: tap the bell at Bramble’s collar three times for a secret ✦</p>
+<p id="egg" class="card" hidden>That little bell is the old guild desk bell he rang for every traveller. It’s a reminder that every great quest begins by answering the call.</p>
+</div>
+</section>
+
+<div class="pixel-divider" aria-hidden="true">✦ ✦ ✦</div>
+<section id="map"><p class="section-kicker">Asterfall map · 01</p><h2>Find your way around the guild</h2><p class="work-intro">Tap a location to jump straight to it.</p><div class="map-board"><svg class="map-paths" aria-hidden="true"></svg><div id="map-token" aria-hidden="true"><svg viewBox="0 0 14 16" shape-rendering="crispEdges"><rect x="3" y="0" width="8" height="3" fill="#8a5a3c"/><rect x="4" y="3" width="6" height="4" fill="#f6d6ab"/><rect x="5" y="5" width="1" height="1" fill="#2a170f"/><rect x="8" y="5" width="1" height="1" fill="#2a170f"/><rect x="4" y="7" width="6" height="4" fill="#dc7a5e"/><rect x="4" y="11" width="6" height="2" fill="#5c78b5"/><rect x="4" y="13" width="2" height="2" fill="#74483a"/><rect x="8" y="13" width="2" height="2" fill="#74483a"/><rect x="11" y="4" width="2" height="2" fill="#78d6f2"/></svg></div><a class="map-pin p1" data-pin="p1" href="#about"><i class="pin-ico" aria-hidden="true"><svg viewBox="0 0 11 11" shape-rendering="crispEdges"><polygon points="5.5,1 10,5 1,5" fill="#f0bd65"/><rect x="2" y="5" width="7" height="5" fill="#c58b4a"/><rect x="4" y="7" width="2" height="3" fill="#2a170f"/></svg></i><b>Guild Hall</b><span>Character</span></a><a class="map-pin p2" data-pin="p2" href="#story"><i class="pin-ico" aria-hidden="true"><svg viewBox="0 0 11 11" shape-rendering="crispEdges"><rect x="1" y="2" width="9" height="2" fill="#f0bd65"/><rect x="1" y="3" width="2" height="8" fill="#b99b7d"/><rect x="8" y="3" width="2" height="8" fill="#b99b7d"/><rect x="4" y="5" width="3" height="6" fill="#2a170f"/></svg></i><b>Old Gate</b><span>Origin</span></a><a class="map-pin p3" data-pin="p3" href="#work"><i class="pin-ico" aria-hidden="true"><svg viewBox="0 0 11 11" shape-rendering="crispEdges"><polygon points="5.5,1.5 10,10 1,10" fill="#f28cae"/><rect x="4" y="7" width="3" height="3" fill="#2a170f"/></svg></i><b>Dreamwood Camp</b><span>Field kit</span></a><a class="map-pin p4" data-pin="p4" href="#guestbook"><i class="pin-ico" aria-hidden="true"><svg viewBox="0 0 11 11" shape-rendering="crispEdges"><rect x="2" y="2" width="7" height="8" fill="#7fcf8f"/><rect x="4" y="2" width="1" height="8" fill="#2a170f"/><rect x="6" y="4" width="2" height="1" fill="#fff1d1"/></svg></i><b>Guild Book</b><span>Sign in</span></a></div><div class="map-legend"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="none" stroke="#f0bd65" stroke-width="2"/><polygon points="20,5 24,20 20,17 16,20" fill="#f28cae"/><polygon points="20,35 24,20 20,23 16,20" fill="#f0bd65"/><text x="20" y="9" font-size="6" text-anchor="middle" fill="#fff1d1" font-family="monospace">N</text></svg><span>✦ you are here · the walking token follows you · dim pins are still unexplored</span></div>
+<div class="card quest-card"><span class="project-tag">QUEST LOG</span><h3>Your guild quests</h3><p id="quest-count">0 of 7 done</p><ol id="quest"><li data-q="map">Tap a pin on the Asterfall map</li><li data-q="char">Read Bramble’s character sheet</li><li data-q="origin">Walk through his Origin story</li><li data-q="work">Look over the Adventurer’s pack</li><li data-q="chat">Ask Bramble a question</li><li data-q="bell">Find the bell secret</li><li data-q="book">Sign the guild book</li></ol></div></section>
+<div class="pixel-divider" aria-hidden="true">✦ ✦ ✦</div>
+<section id="about"><p class="section-kicker">Character sheet · 02</p><h2>The guild’s smallest adventurer</h2>
+<div class="about-grid"><p class="about-intro">Once the first face visitors saw at the Adventurers’ Guild, Sir Bramble is now the first to step forward when danger reaches Asterfall. Small, freckle-cheeked and a little clumsy—yet surprisingly good at facing monsters.</p><div class="card"><dl>
+<dt>Name</dt><dd>Sir Bramble of Asterfall</dd>
+<dt>What they are</dt><dd>A small, round-faced kid with big brown eyes, rosy cheeks and messy chestnut hair that never lies flat. Star headband, rust-orange tunic, green cape, the old guild desk bell at his collar, a pocket lantern and a star-tipped wand. Polite, nervous and secretly fearless. Polite, nervous and secretly fearless. Bramble greets every stranger with “Welcome to the guild!”, apologises to doors he bumps into, and is braver than he knows.</dd>
+<dt>What they do</dt><dd>Adventurer of the Starfall Guild</dd>
+<dt>Their story</dt><dd>Guild receptionist turned adventurer after a band of odd, ugly creatures invaded his city and the guild hall. When one cornered his friends, Bramble fought back—and discovered he had a real talent for monster-slaying.</dd>
+<dt>Tagline</dt><dd>“Small cloak. Big courage. One very odd quest.”</dd>
+</dl></div></div></section>
+
+<div class="pixel-divider" aria-hidden="true">✦ ✦ ✦</div>
+<section id="story"><p class="section-kicker story-heading">Origin · 03</p><h2>From behind the counter to the front line</h2><div class="story-layout"><div class="story-art"><canvas id="sc" width="160" height="96" role="img" aria-label="Pixel scene from Sir Bramble’s fantasy adventure"></canvas><p id="narr" class="narr" aria-live="polite"></p></div><div class="story-list" aria-label="Choose a chapter of Bramble’s origin story"><button class="story-step" data-scene="0" aria-pressed="true"><b>01</b><span>He welcomed travellers and sorted quests at the Starfall Guild.</span></button><button class="story-step" data-scene="1" aria-pressed="false"><b>02</b><span>Ugly little monsters poured through the old gate and invaded Asterfall.</span></button><button class="story-step" data-scene="2" aria-pressed="false"><b>03</b><span>With his friends cornered, Bramble raised his star wand and stood his ground.</span></button><button class="story-step" data-scene="3" aria-pressed="false"><b>04</b><span>He discovered a gift for the fight—and left the desk to join the adventurers.</span></button></div></div></section>
+
+<div class="pixel-divider" aria-hidden="true">✦ ✦ ✦</div>
+<section id="work"><p class="section-kicker">Adventurer’s pack · 04</p><h2>Tools, talents &amp; trials</h2><p class="work-intro">Three little creations from Bramble’s travels—made to be played with, explored, and a little bit magical.</p>
+<div class="g">
+<div class="card project-card"><span class="project-tag">CREATION 01 · SOUND TOY</span><h3>Starfall Spellbook</h3><p>Tap the runes to hear the little melodies Bramble hums to steady his nerves before a quest.</p>
+<div id="keys"></div><button id="lul">Play lullaby</button><div id="viz" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div id="lab" aria-hidden="true"></div></div>
+<div class="card project-card"><span class="project-tag">CREATION 02 · POCKET INVENTORY</span><h3>The Satchel</h3><p>Tap an item tucked into Bramble’s travelling bag to inspect it.</p>
+<div class="vault" id="vault" aria-label="Interactive satchel inventory">
+<button class="pack-item" data-note="His star-wand gets polished every night so it can guide him home.">✦ Star-wand, polished nightly</button>
+<button class="pack-item" data-note="Warm honey cakes for the road—and one extra in case a monster is just hungry.">✦ Warm honey cakes for the road</button>
+<button class="pack-item" data-note="A spare headband, because adventures are windy and Bramble’s hair is stubborn.">✦ A spare headband</button>
+<button class="pack-item" data-note="The guild map marks monster sightings in little red stars. Some are probably doodles.">✦ Guild map with monster sightings</button>
+<p class="satchel-note">Satchel note: “Remember to wave hello. Even to monsters.”</p>
+</div><p id="pack-note" class="demo-note" aria-live="polite">Choose an item to peek inside.</p></div>
+<div class="card project-card"><span class="project-tag">CREATION 03 · MINI GAME</span><h3>Monster-slaying practice</h3><p>Keep your footing and stack the enchanted stones. Bramble learned the hard way that heroes need balance.</p>
+<canvas id="stk" width="90" height="110" role="button" tabindex="0" aria-label="Block stacking mini-game. Click or press Enter or Space to drop a block."></canvas><button id="drop">Drop block</button><p id="sco" aria-live="polite">Height: 0</p></div>
+<div class="card project-card"><span class="project-tag">GUILD RECORD · CHARACTER STATS</span><h3>Guild record</h3><p>Notes from Bramble’s first weeks as an adventurer.</p>
+<div class="b">Arcane aim<i style="--w:92%"></i></div><div class="b">Courage<i style="--w:100%"></i></div><div class="b">Monster lore<i style="--w:86%"></i></div><div class="b">Quest paperwork<i style="--w:100%"></i></div><div class="b">Staying awake on watch<i style="--w:22%"></i></div></div>
+<div class="card project-card"><span class="project-tag">CREATION 04 · CHAT</span><h3>Ask Bramble</h3><p>Pick a question. Bramble answers in character.</p><div id="chat-q"><button class="chat-btn" data-a="0">What’s in your satchel?</button><button class="chat-btn" data-a="1">Are there monsters?</button><button class="chat-btn" data-a="2">Tell me a secret.</button></div><p id="chat-a" class="chat-a" aria-live="polite">Bramble: Welcome to the guild!</p></div>
+<div class="card project-card"><span class="project-tag">CREATION 05 · DIARY</span><h3>Bramble’s diary</h3><p>A new page from his journal every time you visit.</p><p id="diary" class="chat-a"></p></div>
+</div></section>
+
+<div class="pixel-divider" aria-hidden="true">✦ ✦ ✦</div>
+<section id="guestbook"><p class="section-kicker">Guild book · 05</p><h2>Sign the guild book</h2><p class="work-intro">Leave a wish, a greeting, or a note for Bramble. Entries are saved in this browser only.</p><div class="card gb-card"><div class="gb-form"><label for="gb-name">Your name</label><input id="gb-name" maxlength="30" placeholder="Traveller"><label for="gb-msg">Your wish</label><textarea id="gb-msg" maxlength="160" rows="3" placeholder="Stay brave, Bramble!"></textarea><button id="gb-add" class="action primary">Sign the book</button><p id="gb-status" aria-live="polite"></p></div><p id="gb-count" class="gb-count"></p><div id="gb-list"></div></div></section>
+
+<div class="pixel-divider" aria-hidden="true">✦ ✦ ✦</div>
+</main>
+<footer><button id="chest" class="chest" aria-label="Hidden treasure chest"><svg viewBox="0 0 12 9" shape-rendering="crispEdges"><rect class="lid" x="1" y="1" width="10" height="3" fill="#c58b4a"/><rect x="1" y="4" width="10" height="4" fill="#8a5a3a"/><rect x="5" y="3" width="2" height="2" fill="#f0bd65"/></svg></button><p id="chest-note" aria-live="polite"></p><p>Quests completed: <span class="od" id="od"></span></p>
+<p>Credits: Sir Bramble and the pixel scenes are drawn in code for this portfolio. Sound is made live with the Web Audio API: Bramble’s babbles and giggles are synthesized in the browser, with no recordings.</p>
+<p><strong>Behind the build:</strong> Bramble began as a tiny guild receptionist who welcomed every traveller. The idea grew into a little pixel-art world where a shy, kind-hearted character discovers that courage means protecting the people who trust him. The page was built to feel like an early-web character portfolio: part storybook, part toy box, and full of small secrets.</p>
+<p style="opacity:.6">Asterfall field notes · Starfall Guild · Bramble’s bell answers to three taps.</p></footer>
+
+<script>
+(()=>{
+const $=s=>document.querySelector(s),RM=matchMedia('(prefers-reduced-motion:reduce)').matches,rt=document.documentElement;
+let muted=false,AC,egg=-9e3,mx=-1,my=0,lm=0;
+try{muted=localStorage.getItem('bm')==='1'}catch(e){}
+rt.dataset.theme='dark';
+const night=()=>rt.dataset.theme==='dark';
+function tone(f,d=.4,ty='sine',v=.15){if(muted)return;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();AC.resume();const o=AC.createOscillator(),g=AC.createGain(),t=AC.currentTime;o.type=ty;o.frequency.value=f;g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(.001,t+d);o.connect(g).connect(AC.destination);o.start();o.stop(t+d)}catch(e){}}
+const mb=$('#mute'),tb=$('#th');
+const sync=()=>{mb.textContent='Sound: '+(muted?'off':'on');mb.setAttribute('aria-pressed',muted);tb.textContent=night()?'Day':'Night'};
+mb.onclick=()=>{muted=!muted;try{localStorage.setItem('bm',muted?1:0)}catch(e){}sync();tone(660,.1,'square',.05)};
+tb.onclick=()=>{rt.dataset.theme=night()?'light':'dark';sync();tone(night()?330:660,.2,'triangle')};sync();
+const menuToggle=$('#menuToggle'),siteNav=$('#siteNav');
+const closeMenu=()=>{siteNav.classList.remove('is-open');menuToggle.setAttribute('aria-expanded','false');menuToggle.setAttribute('aria-label','Open menu');menuToggle.innerHTML='☰ <span>Menu</span>'};
+menuToggle.addEventListener('click',()=>{const open=!siteNav.classList.contains('is-open');siteNav.classList.toggle('is-open',open);menuToggle.setAttribute('aria-expanded',String(open));menuToggle.setAttribute('aria-label',open?'Close menu':'Open menu');menuToggle.innerHTML=open?'✕ <span>Close</span>':'☰ <span>Menu</span>'});
+siteNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+window.addEventListener('resize',()=>{if(innerWidth>560)closeMenu()});
+
+const W=52,H=72,SX=38,SY=32,INK='#2c1f33';
+const inP=p=>(x,y)=>{let c=false;for(let i=0,j=p.length-1;i<p.length;j=i++){const[a,b]=p[i],[k,d]=p[j];if((b>y)!=(d>y)&&x<(k-a)*(y-b)/(d-b)+a)c=!c}return c};
+const EYE=['#2a170f','#6e4a34'];
+function drawEye(q,cx,cy,mode,ix=0,iy=0){
+const P=(x,y,k)=>{q.fillStyle=k;q.fillRect(x,y,1,1)};
+// Keep the original hand-drawn pixel eyes, but give Bramble a softer, baby-like sparkle.
+if(mode==='happy'){[[-2,1],[-1,0],[0,0],[1,0],[2,1]].forEach(([a,b])=>P(cx+a,cy+b,EYE[0]));return}
+if(mode==='surprised'){for(let y=-3;y<=3;y++)for(let x=-3;x<=3;x++){const d=x*x+y*y;if(d>=5&&d<=9)P(cx+x,cy+y,EYE[0]);else if(d<5)P(cx+x,cy+y,'#fffdf4')}P(cx,cy,EYE[0]);P(cx-1,cy-1,EYE[1]);return}
+if(mode==='shut'){[[-4,0],[-3,1],[-2,1],[-1,1],[0,1],[1,1],[2,1],[3,1],[4,0]].forEach(([a,b])=>P(cx+a,cy+b,EYE[0]));P(cx-2,cy+2,'#8a5a3a');P(cx+2,cy+2,'#8a5a3a');return}
+const f=(x,y)=>((x-cx)/3.7)**2+((y-cy)/4.8)**2<=1;
+for(let y=cy-6;y<=cy+6;y++)for(let x=cx-5;x<=cx+5;x++)if(f(x,y))P(x,y,(!f(x,y+2)&&Math.abs(x-cx)<3)?'#8a5a3a':EYE[0]);
+// Warm iris pixels, big catchlights and a tiny secondary glint.
+for(let y=-2;y<=3;y++)for(let x=-2;x<=2;x++)if(x*x+y*y<=5)P(cx+x+ix,cy+y+iy,'#70472f');
+P(cx-2+ix,cy-3+iy,'#fffdf4');P(cx-1+ix,cy-3+iy,'#fffdf4');P(cx+1+ix,cy+1+iy,'#fffdf4');P(cx+2+ix,cy+2+iy,'#f6d6ab');
+P(cx-4,cy-5,'#fffdf4');
+// One warm upper-lid pixel row helps the eyes read clearly at small scale.
+P(cx-3,cy-5,'#2a170f');P(cx+2,cy-5,'#2a170f');P(cx+3,cy-4,'#2a170f') }
+function makeBramble(step,eyes=true){
+const c=document.createElement('canvas');c.width=W;c.height=H;const q=c.getContext('2d'),stride=step*2,sw=step;
+const P=(x,y,k)=>{q.fillStyle=k;q.fillRect(x,y,1,1)},R=(x,y,w,h,k)=>{q.fillStyle=k;q.fillRect(x,y,w,h)};
+const S=(f,x0,y0,x1,y1,k,s,h)=>{for(let y=y0-1;y<=y1+1;y++)for(let x=x0-1;x<=x1+1;x++){if(!f(x,y))continue;P(x,y,(!f(x-1,y)||!f(x+1,y)||!f(x,y-1)||!f(x,y+1))?INK:!f(x+2,y+2)?s:!f(x-2,y-2)?h:k)}};
+const E=(cx,cy,rx,ry,k,s,h)=>S((x,y)=>((x-cx)/rx)**2+((y-cy)/ry)**2<=1,Math.floor(cx-rx),Math.floor(cy-ry),Math.ceil(cx+rx),Math.ceil(cy+ry),k,s,h);
+const Pl=(p,k,s,h)=>S(inP(p),Math.floor(Math.min(...p.map(a=>a[0]))),Math.floor(Math.min(...p.map(a=>a[1]))),Math.ceil(Math.max(...p.map(a=>a[0]))),Math.ceil(Math.max(...p.map(a=>a[1]))),k,s,h);
+const soft=(cx,cy,rx,ry,k)=>{for(let y=Math.floor(cy-ry);y<=Math.ceil(cy+ry);y++)for(let x=Math.floor(cx-rx);x<=Math.ceil(cx+rx);x++)if(((x-cx)/rx)**2+((y-cy)/ry)**2<=1)P(x,y,k)};
+const HAIR=['#8a5a3c','#5e3a26','#b98056'],TUN=['#dc7a5e','#a85140','#f4a888'],PNT=['#5c78b5','#3f5588','#86a0d8'],SPK=['#8b4aa8','#55296f','#c28be0'],CLK=['#4c9f6a','#2f6a49','#7fcf8f'],CLL=['#63b883','#3b7f58','#9be0a8'],FACE=['#f6d6ab','#dba97c','#fff1d6'],BEL=['#fff0d4','#ebc99f','#fffaf0'],GLD=['#ffd96a','#d99a3a','#fff3b0'],BRN=['#a06a52','#74483a','#c58b70'],WOOD=['#9a6a3c','#6b4426','#c08a52'],CAPC=['#b0703c','#7a4624','#d79a60'],RIM=['#c98a4e','#8a5430','#e8b378'],STAR=['#e4fcff','#78d6f2','#ffffff'];
+const mass=(cx,cy,a0,a1,n,rt,rv,ys)=>{const pts=[[cx,cy]],tp=[],st=n*2;for(let i=0;i<=st;i++){const a=(a0+(a1-a0)*i/st)*Math.PI/180,r=i%2?rt:rv;pts.push([Math.round(cx+Math.cos(a)*r),Math.round(cy+Math.sin(a)*r*ys)]);if(i%2)tp.push(a)}Pl(pts,...SPK);
+tp.forEach(a=>{for(let r=rv+1;r<rt-1;r++)P(Math.round(cx+Math.cos(a)*r),Math.round(cy+Math.sin(a)*r*ys),SPK[2])});return pts.filter((_,i)=>i%2===0&&i>0).map(p=>p)};
+// legs, cape, tunic
+const lx=21-stride,rx=31+stride;
+E(lx,62,3.2,3.6,...PNT);E(rx,62,3.2,3.6,...PNT);
+Pl([[15,42],[37,42],[41,53+sw],[37,58],[26,56+sw],[15,58],[11,53-sw]],...CLK);
+Pl([[19,43],[33,43],[35,53],[34,60],[18,60],[17,53]],...TUN);
+R(18,55,16,2,'#7a4a28');R(25,55,3,2,'#ffd96a');
+E(26,43,9.5,2.4,...CLL);
+['...KKK...','..KhggK..','.KhgggsK.','.KhgggsK.','KhggggssK','KsssssssK','.KKKKKKK.','....c....'].forEach((row,j)=>[...row].forEach((ch,i)=>{const k={K:INK,h:GLD[2],g:GLD[0],s:GLD[1],c:'#c0702a'}[ch];if(k)P(22+i,45+j,k)}));
+E(lx-1,67,5,3,...BRN);E(rx+1,67,5,3,...BRN);R(lx-3,64,5,1,'#f4d8a7');R(rx-1,64,5,1,'#f4d8a7');
+// left arm and lantern
+E(15,50,3,4.5,...TUN);E(14,55,3,3,...FACE);
+P(13,58,'#8a5a30');R(11,59,5,1,'#8a5a30');E(13.5,63,3,3.5,'#ffe58a','#ffbf4a','#fffbe0');R(11,67,5,1,'#8a5a30');P(13,62,'#fff');
+// right arm and star wand
+Pl([[41,38],[44,38],[44,56],[41,56]],...WOOD);
+E(37,50,3,4.5,...TUN);E(40,53,3,3,...FACE);
+q.save();q.translate(0,5);
+// back hair, ears, head
+E(26,22,17.5,15,...HAIR);
+E(11.5,25,2.6,3,...FACE);E(40.5,25,2.6,3,...FACE);
+E(26,23,15.7,13.7,...FACE);
+// Tiny button nose and a curved, friendly smile.
+P(26,29,'#d9967a');P(27,29,'#d9967a');
+[[23,31],[24,32],[25,33],[26,33],[27,33],[28,32],[29,31]].forEach(([x,y])=>P(x,y,'#a65e69'));
+P(25,32,'#fff1d6');P(27,32,'#fff1d6');
+soft(17.8,31.5,3.1,1.9,'#ff9db4');soft(34.2,31.5,3.1,1.9,'#ff9db4');
+// One-pixel cheek highlights make the blush feel soft without losing the pixel style.
+P(17,31,'#ffd2d9');P(35,31,'#ffd2d9');
+[[22,30],[24,30],[28,30],[30,30]].forEach(([x,y])=>{});
+// fringe, cowlick, star headband
+Pl([[11,24],[9.5,16],[11,10],[15,5.5],[21,3],[26,2.5],[31,3],[37,5.5],[41,10],[42.5,16],[41,24],[38,21],[36,17.5],[33,20],[30,16.5],[26,19],[22,16.5],[19,20],[16,17.5],[14,21]],...HAIR);
+Pl([[24,3],[24,0],[28,0],[29,3]],...HAIR);
+[[15,7,8],[13,10,3],[34,6,6]].forEach(([x,y,w])=>R(x,y,w,1,'#d3a073'));
+// Extra restrained pixel strands make the fringe and curls easier to read at larger sizes.
+[[18,11],[20,9],[23,8],[29,8],[33,10],[36,12],[16,14],[24,14],[31,14]].forEach(([x,y],i)=>P(x,y,i%3===0?'#d9a078':'#b98056'));
+// Fine cloak fold highlights add depth without changing Bramble’s familiar silhouette.
+[[14,46,3],[16,49,2],[18,52,3],[34,47,2],[36,50,3],[33,54,2],[21,56,2],[29,57,2]].forEach(([x,y,w])=>R(x,y,w,1,'#7fcf8f'));
+[[15,48],[18,54],[35,52],[32,56]].forEach(([x,y])=>P(x,y,'#2f6a49'));
+Pl([[10,10],[42,10],[42,13],[10,13]],'#ffd96a','#d99a3a','#fff3b0');
+Pl([[26,6],[27.4,9.4],[31,11.5],[27.4,13.6],[26,17],[24.6,13.6],[21,11.5],[24.6,9.4]],...STAR);
+q.restore();
+Pl([[42.5,25],[45,29.5],[49,32],[45,34.5],[42.5,39],[40,34.5],[36,32],[40,29.5]],...STAR);
+// Crisp glints give the wand star a more dimensional, polished pixel finish.
+P(42,27,'#ffffff');P(44,30,'#ffffff');P(39,32,'#78d6f2');P(43,35,'#78d6f2');
+if(eyes){drawEye(q,19,30,'open');drawEye(q,33,30,'open');P(14,27,'#fff1d6');P(37,27,'#fff1d6')}
+return c}
+const heroFrames=[makeBramble(0,false),makeBramble(-1,false),makeBramble(1,false)];
+
+const rnd=i=>{const s=Math.sin(i*12.9898)*43758.5453;return s-Math.floor(s)};
+function mkbg(n){const c=document.createElement('canvas');c.width=128;c.height=112;const b=c.getContext('2d'),p=(x,y,k)=>{b.fillStyle=k;b.fillRect(x,y,1,1)},r=(x,y,w,h,k)=>{b.fillStyle=k;b.fillRect(x,y,w,h)},poly=(pts,k)=>{b.fillStyle=k;b.beginPath();b.moveTo(...pts[0]);pts.slice(1).forEach(v=>b.lineTo(...v));b.closePath();b.fill()};
+const sky=n?['#171b35','#45335e']:['#5e638f','#d6a17c'];
+for(let y=0;y<76;y++){const t=y/76,k=[1,3,5].map(i=>{const a=parseInt(sky[0].slice(i,i+2),16),z=parseInt(sky[1].slice(i,i+2),16);return Math.round(a+(z-a)*t)});r(0,y,128,1,`rgb(${k.join(',')})`)}
+if(n){for(let i=0;i<56;i++)p(rnd(i)*128|0,rnd(i+71)*53|0,i%6?'#dcd5ef':'#f4d18a')}
+for(let y=-7;y<=7;y++)for(let x=-7;x<=7;x++)if(x*x+y*y<=49)p(101+x,21+y,x*x+y*y<39?(n?'#f3dcaa':'#fff0c7'):(n?'#dcae8e':'#f4c68b'));
+poly([[0,57],[18,40],[31,52],[51,34],[68,54],[87,39],[109,55],[128,42],[128,78],[0,78]],n?'#363957':'#70607c');
+poly([[0,66],[21,50],[39,64],[61,48],[82,67],[106,51],[128,67],[128,82],[0,82]],n?'#29364a':'#52604f');
+const forest=n?'#1c3442':'#435843',forestHi=n?'#305152':'#66805c';
+for(let x=-5;x<140;x+=14){const h=15+(x*7%13);poly([[x-7,77],[x,77-h],[x+8,77]],forest);poly([[x-4,77-h+7],[x,77-h-2],[x+5,77-h+7]],forestHi);r(x,76,2,10,n?'#332c3f':'#584337')}
+// The guild lodge sits on the old forest road.
+poly([[70,55],[87,42],[105,55]],n?'#443554':'#755044');r(73,54,29,27,n?'#69536d':'#ad7956');r(71,52,33,4,n?'#b38967':'#e2b478');
+r(84,60,8,21,n?'#31283e':'#68454a');r(77,60,5,6,n?'#ffe0a3':'#ffedbd');r(96,60,5,6,n?'#ffe0a3':'#ffedbd');
+r(85,44,2,8,n?'#54445d':'#8c6256');r(89,44,2,8,n?'#54445d':'#8c6256');r(85,43,6,2,n?'#54445d':'#8c6256');r(86,46,4,4,n?'#d7b16e':'#e7c27c');p(87,47,'#fff1bd');
+r(0,82,128,30,n?'#29303d':'#655144');r(0,82,128,2,n?'#81909a':'#b89a79');
+poly([[48,112],[56,83],[72,83],[82,112]],n?'#75645f':'#b99b7d');
+for(let i=0;i<19;i++){const x=rnd(i+300)*128|0,y=88+(rnd(i+400)*20|0);if(x>48&&x<82)continue;p(x,y,['#e8b874','#e8a1ae','#a9d5bf','#d9c1ed'][i%4])}
+for(let x=6;x<48;x+=13){r(x,87,3,1,n?'#bf9e72':'#d1b48b');r(x+2,96,4,1,n?'#bf9e72':'#d1b48b')}
+return c}
+const BG=[mkbg(0),mkbg(1)];
+const hc=$('#h'),hx=hc.getContext('2d'),fc=$('#fx'),fxx=fc.getContext('2d');hx.imageSmoothingEnabled=false;let HR=null;const heroRect=()=>HR||(HR=hc.getBoundingClientRect());addEventListener('resize',()=>{HR=null});addEventListener('scroll',()=>{HR=null},{passive:true});
+let bs=[];const ff=[...Array(16)].map(()=>({x:Math.random()*512,y:150+Math.random()*280,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.4,ph:Math.random()*6}));
+// Gentle pixel star-dust drifts through the hero artwork without covering the text.
+const starDust=Array.from({length:30},(_,i)=>({x:24+rnd(i+810)*460,y:36+rnd(i+910)*390,
+  vx:(rnd(i+1010)-.5)*.22,vy:-.08-rnd(i+1110)*.2,phase:rnd(i+1210)*Math.PI*2,size:i%5===0?3:2}));
+const bob=t=>RM?0:(Math.floor(t/520)%2?0:1);
+function drawSleepyLid(q,cx,cy){
+// A soft skin-toned lid lowers over the top of each eye at night; the brown iris and catchlights stay visible.
+q.fillStyle='#f0c59b';q.fillRect(cx-3,cy-5,7,1);q.fillRect(cx-2,cy-4,5,1);
+q.fillStyle='#8a5a3a';q.fillRect(cx-3,cy-4,7,1);
+q.fillStyle='#2a170f';q.fillRect(cx-4,cy-5,2,1);q.fillRect(cx+3,cy-5,2,1);
+}
+function hero(t){const n=night(),o=bob(t),ox=SX+(RM?0:Math.round(Math.sin(t/1800)*5)),oy=SY+o,frame=RM?0:Math.floor(t/170)%4,walk=[0,1,0,2][frame];hx.drawImage(BG[n?1:0],0,0);
+hx.fillStyle='rgba(10,20,30,.3)';hx.fillRect(48,102,32,2);hx.fillRect(52,101,24,1);hx.fillRect(52,104,24,1);
+// Refined sprite rendering: gently smooth only Bramble's silhouette and shading when scaling him up.
+// The background and magic effects remain crisp pixel art; facial pixels are redrawn sharply on top.
+const oldSmoothing=hx.imageSmoothingEnabled,oldQuality=hx.imageSmoothingQuality;hx.imageSmoothingEnabled=true;hx.imageSmoothingQuality='high';hx.drawImage(heroFrames[walk],ox,oy);hx.imageSmoothingEnabled=oldSmoothing;hx.imageSmoothingQuality=oldQuality;let ix,iy;
+if(mx>=0&&t-lm<3500){const r=heroRect();ix=mx>r.left+r.width*(SX+26)/128?1:0;iy=my>r.top+r.height*(SY+30)/112?1:0}else{ix=Math.sin(t/1700)>0?1:0;iy=0}
+const sleepy=t-lastAct>30000;if(wasSleepy&&!sleepy)giggle();wasSleepy=sleepy;const bk=sleepy||(!RM&&t%3800<130);
+[19,33].forEach(x=>{const md=bk?'shut':(surpriseT>t?'surprised':(mood>=3?'happy':'open'));drawEye(hx,ox+x,oy+30,md,ix,iy);if(n&&md==='open')drawSleepyLid(hx,ox+x,oy+30)})}
+const glow=(x,y,r,c,a)=>{const gr=fxx.createRadialGradient(x,y,0,x,y,r);gr.addColorStop(0,c.replace('A',a));gr.addColorStop(1,c.replace('A',0));fxx.fillStyle=gr;fxx.fillRect(x-r,y-r,2*r,2*r)};
+function fx(t){fxx.clearRect(0,0,512,448);const n=night(),fl=.85+.15*Math.sin(t/230),o=bob(t),E=t-egg<4000;
+glow(392,88,170,n?'rgba(150,170,255,A)':'rgba(255,225,150,A)',.4);
+fxx.fillStyle=n?'rgba(170,190,255,.05)':'rgba(255,245,210,.09)';for(let i=0;i<3;i++){fxx.beginPath();fxx.moveTo(330+i*40,0);fxx.lineTo(375+i*40,0);fxx.lineTo(200+i*90,448);fxx.lineTo(110+i*90,448);fxx.fill()}
+glow((SX+14.5)*4,(SY+o+59)*4,70,'rgba(255,210,110,A)',(n?.5:.25)*fl);glow((SX+42)*4,(SY+o+33)*4,56,'rgba(150,230,255,A)',(n?.38:.2)*fl);
+glow((SX+26)*4,(SY+o+48)*4,40,'rgba(255,215,120,A)',E?.6:.12+.05*Math.sin(t/300));
+[19,33].forEach(x=>glow((SX+x)*4,(SY+o+30)*4,E?26:14,'rgba(255,190,230,A)',E?.6:.04));
+ff.forEach(f=>{if(!RM){f.x+=f.vx;f.y+=f.vy;if(f.x<0||f.x>512)f.vx*=-1;if(f.y<120||f.y>430)f.vy*=-1}const a=.5+.5*Math.sin(t/400+f.ph);glow(f.x,f.y,14,n?'rgba(160,255,255,A)':'rgba(255,240,150,A)',a*.9);fxx.globalAlpha=a;fxx.fillStyle=n?'#dffcff':'#fff8c8';fxx.fillRect(f.x-1,f.y-1,3,3);fxx.globalAlpha=1});
+starDust.forEach((d,i)=>{if(!RM){d.x+=d.vx;d.y+=d.vy;if(d.y<28){d.y=430;d.x=24+rnd(i+t|0)*460}if(d.x<18||d.x>494)d.vx*=-1}const a=.25+.75*(.5+.5*Math.sin(t/360+d.phase));fxx.globalAlpha=a;fxx.fillStyle=(i%3===0)?'#b9f4ff':(n?'#e5eaff':'#fff0a8');fxx.fillRect(d.x|0,d.y|0,d.size,1);if(i%4===0)fxx.fillRect((d.x+1)|0,(d.y-1)|0,1,3);fxx.globalAlpha=1});
+if(mx>=0&&t-lm<3000){const r=heroRect(),px=(mx-r.left)/r.width*512,py=(my-r.top)/r.height*448;const near=starDust.filter(d=>Math.hypot(d.x-px,d.y-py)<110);fxx.globalAlpha=1;fxx.strokeStyle=n?'rgba(180,220,255,.5)':'rgba(255,230,160,.55)';fxx.lineWidth=1;fxx.beginPath();for(let i=0;i<near.length;i++)for(let j=i+1;j<near.length;j++){const a=near[i],b=near[j];if(Math.hypot(a.x-b.x,a.y-b.y)<90){fxx.moveTo(a.x,a.y);fxx.lineTo(b.x,b.y)}}fxx.stroke()}
+bs=bs.filter(b=>b.l>0);bs.forEach(b=>{b.x+=b.vx;b.y+=b.vy;b.vy+=.12;b.l--;fxx.fillStyle=b.c;fxx.fillRect(b.x|0,b.y|0,b.size||3,b.size||3);if(b.star&&b.l%3===0){fxx.fillRect((b.x+2)|0,(b.y-2)|0,1,5);fxx.fillRect((b.x)|0,(b.y)|0,5,1)}})}
+addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;lm=performance.now();if(!RM&&(lm-(addEventListener.t||0))>45){addEventListener.t=lm;const s=document.createElement('span');s.className='sp';s.textContent=Math.random()<.5?'✦':'★';s.style.left=mx+'px';s.style.top=my+'px';document.body.appendChild(s);s.onanimationend=()=>s.remove()}});
+const babble=(n=8,base=640)=>{for(let k=0;k<n;k++)setTimeout(()=>tone(base*(0.85+Math.random()*0.5)*(k%2?1.12:1),.16,'triangle',.22),k*140)};
+const giggle=()=>{[880,1046,1318,1046,1318].forEach((f,i)=>setTimeout(()=>tone(f,.12,'sine',.2),i*90))};
+let wasSleepy=false;
+let lastAct=performance.now();
+['pointermove','pointerdown','keydown'].forEach(ev=>addEventListener(ev,()=>{lastAct=performance.now()},{passive:true}));
+const chatAns=['Honey cakes, a spare headband, and a guild map with a few monster sightings marked in little red stars. Some are probably doodles.','Only a few, and they are mostly grumpy. I always wave hello first, just in case.','My wand glows brighter when someone is brave, even a little bit. Don’t tell the monsters.'];
+$('#chat-q').onclick=e=>{const b=e.target.closest('.chat-btn');if(!b)return;markQ('chat');$('#chat-a').textContent='Bramble: '+chatAns[+b.dataset.a];babble(8)};
+if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!RM){const dio=$('.dio');dio.addEventListener('pointermove',e=>{const r=dio.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;dio.style.transform=`perspective(700px) rotateX(${(-y*6).toFixed(2)}deg) rotateY(${(x*8).toFixed(2)}deg)`});dio.addEventListener('pointerleave',()=>{dio.style.transform=''})}
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches){const lv=$('#leaves');for(let k=0;k<(innerWidth<700?4:8);k++){const l=document.createElement('span');l.className='leaf';l.style.left=(k*13+rnd(k+900)*9)+'%';l.style.animationDuration=(14+rnd(k+950)*10)+'s';l.style.animationDelay=(-rnd(k+990)*20)+'s';lv.appendChild(l)}}
+if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!RM){const moth=$('#moth');let tx=innerWidth/2,ty=innerHeight/2,px=tx,py=ty;addEventListener('pointermove',e=>{tx=e.clientX+18;ty=e.clientY-14});(function flutter(){if(!document.hidden){px+=(tx-px)*.05;py+=(ty-py)*.05;moth.style.transform=`translate(${px|0}px,${py|0}px)`}requestAnimationFrame(flutter)})()}
+let bellHover=false;hc.addEventListener('pointermove',e=>{const r=heroRect(),x=(e.clientX-r.left)/r.width*128,y=(e.clientY-r.top)/r.height*112;const inBell=Math.abs(x-64)<8&&Math.abs(y-80)<8;if(inBell&&!bellHover){bellHover=true;tone(988,.12,'sine',.05)}else if(!inBell)bellHover=false});
+const questDone=new Set();
+const markQ=k=>{const li=document.querySelector('#quest [data-q="'+k+'"]');if(!li||questDone.has(k))return;questDone.add(k);li.classList.add('done');toast(li.textContent);const total=document.querySelectorAll('#quest li').length;$('#quest-count').textContent=questDone.size+' of '+total+' done'};
+const watch=(sel,key)=>{const el=document.querySelector(sel);if(!el||!('IntersectionObserver' in window))return;const io=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){markQ(key);io.disconnect()}},{threshold:.35});io.observe(el)};
+watch('#about','char');watch('#work','work');watch('#story','origin');
+document.querySelector('.map-board').addEventListener('click',e=>{if(e.target.closest('.map-pin'))markQ('map')});
+(()=>{const board=document.querySelector('.map-board'),svgP=board.querySelector('.map-paths'),token=document.getElementById('map-token');
+const pins={};board.querySelectorAll('.map-pin').forEach(a=>pins[a.dataset.pin]=a);
+const center=(el)=>{const r=el.getBoundingClientRect(),b=board.getBoundingClientRect();return{x:r.left-b.left+r.width/2,y:r.top-b.top+r.height/2,top:r.top-b.top}};
+const NS='http://www.w3.org/2000/svg';
+const pairs=[['p1','p3'],['p1','p2'],['p3','p4'],['p2','p4']];
+function drawPaths(){svgP.textContent='';const b=board.getBoundingClientRect();svgP.setAttribute('viewBox','0 0 '+b.width+' '+b.height);pairs.forEach(([a,c])=>{const A=center(pins[a]),C=center(pins[c]);const l=document.createElementNS(NS,'line');l.setAttribute('x1',A.x);l.setAttribute('y1',A.y);l.setAttribute('x2',C.x);l.setAttribute('y2',C.y);l.setAttribute('class','dash');svgP.appendChild(l)})}
+function moveToken(k,instant){const c=center(pins[k]);token.style.transition=instant?'none':'';token.style.left=c.x+'px';token.style.top=c.top+'px'}
+function reveal(k){pins[k].classList.remove('fog')}
+Object.keys(pins).forEach(k=>{pins[k].classList.add('fog');pins[k].addEventListener('click',()=>{reveal(k);moveToken(k);markQ && markQ('map')})});
+function layout(){drawPaths();moveToken(currentPin,true)}
+let currentPin='p1';reveal('p1');
+const sectionPin=[['#about h2','p1'],['#story h2','p2'],['#work h2','p3'],['#guestbook h2','p4']];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const pair=sectionPin.find(([sel])=>e.target.matches(sel));if(!pair)return;const k=pair[1];reveal(k);Object.values(pins).forEach(p=>p.classList.remove('here'));pins[k].classList.add('here');currentPin=k;moveToken(k)}),{threshold:.35});
+sectionPin.forEach(([sel])=>{const el=document.querySelector(sel);if(el)io.observe(el)});
+addEventListener('resize',layout);
+requestAnimationFrame(()=>{layout();moveToken(currentPin,true)});
+})();
+function toast(txt){const t=$('#toast');t.textContent='✦ Quest complete: '+txt.replace('☐','').replace('✔','').trim();t.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('show'),2600)}
+function tintMap(f){const t=f/5,m=(a,b)=>Math.round(a+(b-a)*t);document.querySelector('.map-board').style.setProperty('--grass','rgb('+m(36,74)+','+m(67,90)+','+m(47,42)+')')}
+$('#chest').onclick=()=>{const o=$('#chest').classList.toggle('open');$('#chest-note').textContent=o?'Bramble’s note: the honey cakes are in the satchel, always. Ask nicely.':'';tone(523,.2,'triangle',.1)};
+const KON=['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];let kp=0;
+addEventListener('keydown',e=>{const k=e.key.length===1?e.key.toLowerCase():e.key;kp=(k===KON[kp])?kp+1:(k===KON[0]?1:0);if(kp===KON.length){kp=0;for(let i=0;i<40;i++){const sp=document.createElement('span');sp.className='shower';sp.textContent=i%2?'★':'✦';sp.style.left=Math.random()*100+'%';sp.style.animationDelay=(Math.random()*1.2)+'s';document.body.appendChild(sp);sp.onanimationend=()=>sp.remove()}}});
+let lastHr=new Date().getHours();
+setInterval(()=>{const h=new Date().getHours();if(h!==lastHr){lastHr=h;[784,1047].forEach((f,i)=>setTimeout(()=>tone(f,.5,'triangle',.14),i*160))}},20000);
+const wx={'#story h2':'snow','#guestbook h2':'stars'};
+const wio=new IntersectionObserver(es=>es.forEach(e=>{const sel=Object.keys(wx).find(k=>e.target.matches(k));if(!sel)return;if(e.isIntersecting)document.body.dataset.weather=wx[sel];else if(document.body.dataset.weather===wx[sel])document.body.dataset.weather='none'}),{threshold:.35});
+Object.keys(wx).forEach(sel=>{const el=document.querySelector(sel);if(el)wio.observe(el)});
+document.body.dataset.weather='none';
+(()=>{const w=$('#weather');for(let i=0;i<(innerWidth<700?10:26);i++){const f=document.createElement('span');f.className='wf';f.style.left=(rnd(i+1500)*100)+'%';f.style.top=(rnd(i+1600)*100)+'%';f.style.animationDelay=(-rnd(i+1700)*9)+'s';w.appendChild(f)}})();
+let surpriseT=0;const clk=[];
+function surpriseCheck(){const n=performance.now();clk.push(n);while(clk.length&&n-clk[0]>1500)clk.shift();if(clk.length>=4){surpriseT=n+2500;clk.length=0}}
+const tw='> welcome to the guild';const tEl=$('#typed');
+if(matchMedia('(prefers-reduced-motion:reduce)').matches)tEl.textContent=tw;else{let ti=0;(function step(){tEl.textContent=tw.slice(0,++ti);if(ti<tw.length)setTimeout(step,55)})()}
+$('#postcard').onclick=()=>{const c=document.createElement('canvas');c.width=512;c.height=320;const g=c.getContext('2d');g.fillStyle='#171526';g.fillRect(0,0,512,320);g.drawImage(hc,96,0,320,280);g.strokeStyle='#f0bd65';g.lineWidth=8;g.strokeRect(4,4,504,312);g.font='bold 26px monospace';g.fillStyle='#fff1d1';g.fillText('Sir Bramble of Asterfall',20,302);const f=Math.min(5,Math.ceil(mood/3));g.font='26px monospace';g.fillStyle='#f28cae';g.fillText('♥'.repeat(f)+'♡'.repeat(5-f),330,302);const a=document.createElement('a');a.download='bramble-postcard.png';a.href=c.toDataURL('image/png');a.click();tone(880,.2,'triangle',.1)};
+function burst(x,y){const cols=['#f0bd65','#f28cae','#7fcf8f','#9ab8ff'];for(let i=0;i<30;i++){const d=document.createElement('span');d.className='conf';d.style.background=cols[i%4];d.style.left=x+'px';d.style.top=y+'px';const a=Math.random()*Math.PI*2,r=40+Math.random()*60;d.style.setProperty('--dx',Math.cos(a)*r+'px');d.style.setProperty('--dy',Math.sin(a)*r+'px');document.body.appendChild(d);d.onanimationend=()=>d.remove()}}
+const bars=[...document.querySelectorAll('#viz i')];
+setInterval(()=>{const on=$('#lul').textContent==='Stop lullaby';bars.forEach(b=>b.style.height=on?(4+Math.random()*26)+'px':'4px')},180);
+let mood=0;const moodUp=()=>{mood++;const f=Math.min(5,Math.ceil(mood/3));$('#hearts').textContent='♥'.repeat(f)+'♡'.repeat(5-f);tintMap(f);$('#mood-note').textContent=f>=5?'Bramble feels brave! Thanks for the cheer.':'Keep going, he is listening.'};
+let gc=0;hc.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();const r=heroRect();hc.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,clientX:r.left+r.width*80/128,clientY:r.top+r.height*60/112,pointerType:'mouse'}))}});hc.addEventListener('pointerdown',e=>{moodUp();surpriseCheck();const r=heroRect(),x=(e.clientX-r.left)/r.width*128,y=(e.clientY-r.top)/r.height*112;
+// A tiny burst of warm stars rewards a click anywhere on Bramble.
+for(let i=0;i<8;i++)bs.push({x:x*4,y:y*4,vx:(Math.random()-.5)*3,vy:-Math.random()*3-0.5,l:24+Math.random()*18|0,c:i%2?'#ffabc1':'#ffe08a',size:3});
+// Clicking near Bramble's star-tipped wand triggers a distinct pixel-sparkle burst.
+if(x>68&&x<91&&y>43&&y<79){const wx=326,wy=258;for(let i=0;i<24;i++){const a=Math.random()*Math.PI*2,sp=.8+Math.random()*3.2;bs.push({x:wx+(Math.random()-.5)*8,y:wy+(Math.random()-.5)*8,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp,l:22+Math.random()*24|0,c:['#e5fcff','#8be6ff','#ffe08a','#fff7d0'][i%4],size:i%4===0?4:2,star:i%3===0})}tone(1047,.22,'triangle',.1);tone(1568,.3,'sine',.06)}
+if(Math.abs(x-64)<8&&Math.abs(y-80)<8){gc++;tone(880+gc*120,.3,'triangle',.12);if(gc>=3){gc=0;egg=performance.now();for(let i=0;i<60;i++)bs.push({x:256,y:280,vx:(Math.random()-.5)*9,vy:-Math.random()*7-2,l:60+Math.random()*30|0,c:Math.random()<.5?'#ffabc1':'#ffe08a',size:3,star:i%3===0});[523,659,784,1047,1319].forEach((f,i)=>setTimeout(()=>tone(f,.5,'triangle',.12),i*110));$('#egg').hidden=false;markQ('bell')}}
+else[700,880,760].forEach((f,i)=>setTimeout(()=>tone(f,.09,'square',.05),i*70))});
+
+const gbKey='bramble-guestbook';
+const gbLoad=()=>{try{return JSON.parse(localStorage.getItem(gbKey)||'[]')}catch(e){return []}};
+const gbSave=a=>{try{localStorage.setItem(gbKey,JSON.stringify(a))}catch(e){}};
+const gbList=$('#gb-list');
+const gbRender=()=>{const a=gbLoad();$('#gb-count').textContent='Wishes left in this browser: '+a.length;gbList.textContent='';if(!a.length){const p=document.createElement('p');p.className='gb-empty';p.textContent='No wishes yet. Be the first traveller!';gbList.appendChild(p);return}a.slice().reverse().forEach(it=>{const d=document.createElement('div');d.className='gb-entry';const n=document.createElement('b');n.textContent=it.name;const m=document.createElement('span');m.textContent=it.msg;d.append(n,m);gbList.appendChild(d)})};
+$('#gb-add').onclick=()=>{markQ('book');const msg=$('#gb-msg').value.trim().slice(0,160);if(!msg){$('#gb-status').textContent='Write a short wish first.';return}const name=$('#gb-name').value.trim().slice(0,30)||'Anonymous traveller';const a=gbLoad();a.push({name,msg});gbSave(a.slice(-20));$('#gb-msg').value='';$('#gb-status').textContent='Thank you! Your wish is in the guild book.';tone(784,.3,'triangle',.1);{const r=$('#gb-add').getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2)}gbRender()};
+gbRender();
+setTimeout(()=>{const i=document.getElementById('intro');if(i)i.remove()},2700);
+const sc=$('#sc'),sx=sc.getContext('2d');sx.imageSmoothingEnabled=false;let si=-1,storyIndex=0;
+// Draw clearly visible, matching pixel eyes on every Origin-stage frame.
+// The hero eyes are proportionally too tiny when Bramble is scaled into the story canvas,
+// so use the same warm dark outline, brown iris, and cream catchlights at story scale.
+function drawStoryEye(cx,cy,w,h,isNight=false){
+  // Pixel eyes matching the hero design: dark outline, warm brown iris, cream catchlight.
+  // Night adds a soft lowered lid across the top row while the brown iris stays visible.
+  // One 4x4 eye at every scene size, so the eyes stay proportional to Bramble's small story sprite.
+  const day=[".KK.","KWIK","KIIK",".KK."];
+  const night=[".KK.","KSSK","KWIK",".KK."];
+  const pat=isNight?night:day, pw=pat[0].length, ph=pat.length;
+  const C={K:'#2a170f',I:'#70472f',W:'#fffdf4',S:'#dba97c'};
+  const left=Math.round(cx-pw/2), top=Math.round(cy-ph/2);
+  pat.forEach((row,yy)=>[...row].forEach((ch,xx)=>{if(C[ch]){sx.fillStyle=C[ch];sx.fillRect(left+xx,top+yy,1,1)}}));
+}
+function drawStoryBramble(frame,x,y,w,h){
+  // Smooth only the character sprite very lightly at story scale; keep the scene's pixel background crisp.
+  const oldSmoothing=sx.imageSmoothingEnabled;sx.imageSmoothingEnabled=false;sx.drawImage(heroFrames[frame],x,y,w,h);sx.imageSmoothingEnabled=oldSmoothing;
+  const eyeY=y+h*30/72, sleepy=night();
+  drawStoryEye(x+w*19/52,eyeY,w,h,sleepy);
+  drawStoryEye(x+w*33/52,eyeY,w,h,sleepy);
+}
+function scene(t){const i=storyIndex;
+const NARR=['Once upon a time, a small guild receptionist welcomed every traveller who walked through the door.','Then the old gate creaked open, and the ugly little monsters came marching in.','With his friends cornered, Bramble lifted his star wand and did not run.','So the desk bell rang for the last time, and a hero stepped out to meet the dark.'];
+if(i!==si){$('#narr').textContent=NARR[i];si=i;document.querySelectorAll('.story-step').forEach((e,k)=>e.setAttribute('aria-pressed',k===i))}
+const X=(x,y,w,h,c)=>{sx.fillStyle=c;sx.fillRect(x,y,w,h)};
+const poly=(points,color)=>{sx.fillStyle=color;sx.beginPath();sx.moveTo(...points[0]);points.slice(1).forEach(v=>sx.lineTo(...v));sx.closePath();sx.fill()};
+const star=(x,y)=>{X(x,y,2,2,'#f5d890');X(x+1,y-1,1,4,'#fff1c0')};
+const monster=(x,y,color)=>{y=y+((t/450|0)%2);const K='#2a170f',W='#fff1d1';
+X(x+2,y-1,3,3,K);X(x+10,y-1,3,3,K);X(x+3,y,1,2,color);X(x+11,y,1,2,color);
+X(x,y+1,15,11,K);X(x+1,y+2,13,9,color);X(x+3,y+2,3,1,'rgba(255,255,255,.28)');X(x+2,y+10,11,1,'rgba(0,0,0,.22)');
+X(x+3,y+4,3,3,W);X(x+9,y+4,3,3,W);X(x+4,y+5,2,2,K);X(x+10,y+5,2,2,K);X(x+4,y+5,1,1,'#ffffff');X(x+10,y+5,1,1,'#ffffff');
+X(x+2,y+7,2,1,'#ff9db4');X(x+11,y+7,2,1,'#ff9db4');
+X(x+5,y+9,5,1,K);X(x+4,y+8,1,1,K);X(x+10,y+8,1,1,K);
+X(x+2,y+12,3,2,K);X(x+10,y+12,3,2,K)};
+const sky=[['#202944','#645275'],['#25243c','#744858'],['#25243c','#58415f'],['#1c2d3a','#675271']][i];
+X(0,0,160,96,sky[0]);for(let y=0;y<56;y++)X(0,y,160,1,`rgba(193,162,191,${y/90})`);
+for(let k=0;k<22;k++)if((k+i)%3!==0)star((k*47+19)%156,(k*29+5)%38);
+X(125,12,12,12,'#efd59a');X(127,13,10,10,'#fff0c6');
+poly([[0,60],[20,39],[37,57],[57,34],[78,59],[102,38],[126,59],[145,43],[160,55],[160,78],[0,78]],'#34384b');
+poly([[0,69],[22,51],[42,69],[65,46],[87,68],[112,51],[135,70],[153,55],[160,61],[160,84],[0,84]],'#34463f');
+for(let x=0;x<170;x+=17){const h=17+(x*3%11);poly([[x-7,78],[x,78-h],[x+8,78]],'#1c3435');poly([[x-4,78-h+7],[x,78-h-1],[x+4,78-h+7]],'#38514a')}
+X(0,81,160,15,'#403a43');X(0,81,160,2,'#9b806b');
+poly([[42,96],[63,81],[93,81],[119,96]],'#68594e');for(let x=13;x<156;x+=19)X(x,87,5,2,'#a58a6a');
+const ambient=()=>{for(let k=0;k<4;k++){const lx=(k*43+(t/60|0))%160,ly=(k*17+(t/35|0))%70;X(lx,ly,2,1,'#c58b4a');X(lx+1,ly+1,1,1,'#e0a866')}const bx=((t/45|0)%190)-15,by=14+((t/900|0)%2);X(bx,by,2,1,'#2a2438');X(bx+2,by-1,1,1,'#2a2438');X(bx+3,by,2,1,'#2a2438')};
+ambient();
+if(i===0){X(17,22,48,60,'#51465c');X(13,19,56,5,'#a77c62');X(28,28,24,22,'#75604e');X(31,31,18,19,'#302a3d');X(32,32,16,2,'#d6b575');X(21,39,43,4,'#a77c62');X(22,43,4,15,'#58404b');X(59,43,4,15,'#58404b');X(37,26,6,7,'#dfbd78');X(39,28,2,3,'#fff0bf');drawStoryBramble(0,35,40,22,31)}
+if(i===1){X(25,48,3,34,'#8a6854');X(20,43,13,4,'#9c755d');X(32,55,3,27,'#8a6854');X(29,51,11,4,'#9c755d');monster(113,64,'#7d7974');monster(92,72,'#87905f');drawStoryBramble(0,39,42,24,34)}
+if(i===2){monster(113,65,'#81815c');monster(93,74,'#747a80');drawStoryBramble(RM?0:[0,1,0,2][Math.floor(t/180)%4],57,39+(RM?0:(t/220|0)%2),28,39);star(94,52);star(104,45);star(86,60)}
+if(i===3){X(99,45,3,37,'#7a604b');X(96,41,9,5,'#735547');X(104,48,22,15,'#836245');X(102,45,27,5,'#c39a63');X(111,54,7,6,'#ffe1a1');drawStoryBramble(RM?0:[0,1,0,2][Math.floor(t/180)%4],59,40+(RM?0:(t/220|0)%2),28,39);star(44,49);star(73,57)}
+}
+const storyMQ=matchMedia('(min-width:1px)');
+const storyTravel=()=>$('#story').offsetHeight-innerHeight;
+const syncStoryToScroll=()=>{if(!storyMQ.matches||RM)return;const travel=storyTravel();if(travel<=0)return;const p=Math.min(.999,Math.max(0,-$('#story').getBoundingClientRect().top/travel));const i=Math.floor(p*4);if(i!==storyIndex)storyIndex=i};
+let sq=0;addEventListener('scroll',()=>{if(sq)return;sq=requestAnimationFrame(()=>{sq=0;syncStoryToScroll()})},{passive:true});requestAnimationFrame(()=>setTimeout(syncStoryToScroll,0));
+document.querySelector('.story-list').addEventListener('click',e=>{const button=e.target.closest('.story-step');if(!button)return;storyIndex=Number(button.dataset.scene);scene(performance.now());
+if(storyMQ.matches&&!RM){const travel=storyTravel();if(travel>0){const top=$('#story').getBoundingClientRect().top+scrollY;window.scrollTo({top:top+travel*(storyIndex+.5)/4,behavior:'smooth'})}}});
+
+const SCL=[392,440,523,587,659,784];let iv=0,k=2;
+const star=()=>{const s=document.createElement('span');s.className='st';s.textContent='★';s.style.left=Math.random()*90+'%';$('#lab').appendChild(s);s.onanimationend=()=>s.remove()};
+const note=i=>{tone(SCL[i],1.2,'triangle',.18);tone(SCL[i]*2,.6,'sine',.05);star()};
+$('#keys').innerHTML=['G','A','C','D','E','G'].map((n,i)=>`<button data-i="${i}" aria-label="Play note ${n}">${n}</button>`).join('');
+$('#keys').onclick=e=>{const b=e.target.closest('button');if(b)note(+b.dataset.i)};
+$('#lul').onclick=e=>{if(iv){clearInterval(iv);iv=0;e.target.textContent='Play lullaby'}else{e.target.textContent='Stop lullaby';iv=setInterval(()=>{k=Math.max(0,Math.min(5,k+[-1,0,1,2,-2][Math.random()*5|0]));note(k)},520)}};
+
+const v=$('#vault'),vm=e=>{const r=v.getBoundingClientRect();v.style.setProperty('--x',e.clientX-r.left+'px');v.style.setProperty('--y',e.clientY-r.top+'px')};v.addEventListener('pointermove',vm);v.addEventListener('pointerdown',vm);
+v.querySelectorAll('.pack-item').forEach(b=>b.setAttribute('aria-pressed','false'));
+v.addEventListener('click',e=>{const b=e.target.closest('.pack-item');if(!b)return;v.querySelectorAll('.pack-item').forEach(item=>item.setAttribute('aria-pressed',String(item===b)));$('#pack-note').textContent=b.dataset.note;tone(620,.12,'triangle',.06)});
+
+const kx=$('#stk').getContext('2d'),KC=['#e2485c','#4468b8','#e8b445','#5aa469'];let bl,cu;
+const rs=()=>{bl=[{x:25,w:40}];cu={x:0,w:40,d:1,s:.9}};rs();
+function drop(){const p=bl[bl.length-1],l=Math.max(cu.x,p.x),ov=Math.min(cu.x+cu.w,p.x+p.w)-l;
+if(ov<=0){$('#sco').textContent='Oh no, the tower fell! Try again.';rs();tone(150,.3,'sawtooth');return}
+bl.push({x:l,w:ov});cu.w=ov;cu.s+=.07;tone(300+bl.length*30,.15,'square',.08);
+if(bl.length>=14){$('#sco').textContent='Tower complete! Block Knight!';[523,659,784,1047].forEach((f,i)=>setTimeout(()=>tone(f,.4,'triangle'),i*120));rs();return}$('#sco').textContent='Height: '+(bl.length-1)}
+$('#stk').onpointerdown=drop;$('#stk').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();drop()}});$('#drop').onclick=drop;
+function stack(){kx.fillStyle='#1b1233';kx.fillRect(0,0,90,110);bl.forEach((b,i)=>{kx.fillStyle=KC[i%4];kx.fillRect(b.x,110-6*(i+1),b.w,5)});
+if(!RM){cu.x+=cu.d*cu.s;if(cu.x+cu.w>90){cu.x=90-cu.w;cu.d=-1}if(cu.x<0){cu.x=0;cu.d=1}}kx.fillStyle=KC[bl.length%4];kx.fillRect(cu.x,110-6*(bl.length+1),cu.w,5)}
+
+let vis=0;try{vis=(+localStorage.getItem('bv')||0)+1;localStorage.setItem('bv',vis)}catch(e){}
+$('#od').innerHTML=String(1204+vis).padStart(5,'0').split('').map(c=>`<span>${c}</span>`).join('');
+if(vis>1)$('#hi').textContent='Welcome back to Asterfall, traveller! Guild visit #'+vis+'. Bramble saved a quest for you.';
+const diaryEntries=['Day one at the guild desk. A traveller asked where the honey cakes were. I did not know. I do now.','Monsters at the old gate again. I waved first, like always. Only one bit my cape.','The moon was round tonight, so I practised my star-wand under it. It only sparkled twice.','Someone signed the guild book with a drawing of me. I have decided it looks brave.','My headband fell off on the road. I found it, polished it, and felt a little more like an adventurer.'];
+$('#diary').textContent=diaryEntries[Math.max(0,vis-1)%diaryEntries.length];
+let raf=0,lastT=0;
+const vis3={h:true,sc:false,stk:false};
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>vis3[e.target.id]=e.isIntersecting));['h','sc','stk'].forEach(id=>{const el=document.getElementById(id);if(el){vis3[id]=false;io.observe(el)}})}
+let lastF=0;
+function animate(t){if(document.hidden)return;raf=requestAnimationFrame(animate);if(t-lastF<33)return;lastF=t;if(vis3.h){hero(t);fx(t)}if(vis3.sc)scene(t);if(vis3.stk)stack()}
+function startAnimation(){if(!raf&&!document.hidden)raf=requestAnimationFrame(animate)}
+function stopAnimation(){if(raf)cancelAnimationFrame(raf);raf=0}
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stopAnimation();else startAnimation()});
+requestAnimationFrame(()=>setTimeout(startAnimation,0));
+})();
+</script></body></html>
